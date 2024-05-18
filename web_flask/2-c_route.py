@@ -24,7 +24,7 @@ def display_hello():
 def c_route():
     """ c route appp """
     text = text.replace('_', ' ')
-    return f'C text'
+    return 'C {}'.format(text)
 
 
 if __name__ == '__main__':
