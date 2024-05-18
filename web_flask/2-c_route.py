@@ -5,23 +5,24 @@ from flask import Flask
 
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 
-@app.route('/', strict_slashes=False)
+@app.route('/')
 def hello():
-    """return hello hbnb"""
+    """ return hello hbnb """
     return "Hello HBNB!"
 
 
-@app.route("/hbnb", strict_slahses=False)
+@app.route("/hbnb")
 def display_hello():
-    """display honly hbnb"""
+    """ display honly hbnb """
     return "HBNB"
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route('/c/<text>')
 def c_route():
-    """c route appp"""
+    """ c route appp """
     text = text.replace('_', ' ')
     return f'C text'
 
