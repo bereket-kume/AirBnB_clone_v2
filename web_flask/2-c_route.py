@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""display “C ” followed by the value of the text variable """
+""" 2. Script to start a Flask web application with 3 view functions """
 
 from flask import Flask
 
@@ -9,20 +9,20 @@ app.url_map.strict_slashes = False
 
 
 @app.route('/')
+def hello_world():
+    """ Returns some text. """
+    return 'Hello HBNB!'
+
+
+@app.route('/hbnb')
 def hello():
-    """ return hello hbnb """
-    return "Hello HBNB!"
-
-
-@app.route("/hbnb")
-def display_hello():
-    """ display honly hbnb """
-    return "HBNB"
+    """ Return other text. """
+    return 'HBNB'
 
 
 @app.route('/c/<text>')
-def c_route():
-    """ c route appp """
+def c_text(text):
+    """ replace text with variable. """
     text = text.replace('_', ' ')
     return 'C {}'.format(text)
 
