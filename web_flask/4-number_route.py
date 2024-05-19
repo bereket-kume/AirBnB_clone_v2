@@ -39,7 +39,7 @@ def python_text(text='is cool'):
 def number_route():
     """  number route with python"""
     n = str(n)
-    return '{} is number'.format(n)
+    return '{} is a number'.format(n)
 
 
 if __name__ == '__main__':
